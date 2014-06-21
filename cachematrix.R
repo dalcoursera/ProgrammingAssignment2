@@ -1,5 +1,5 @@
-## This set of functions caches the inverse of a matrix so that the
-## cached result can be returned if not already calculated.
+## This set of functions makes a special matrix that can cache its inverse 
+##  so the cached result can be returned if not already calculated.
 
 ## makeCacheMatrix creates a special matrix, which is really a list that 
 ##  contains functions to set or get the value of the matrix and set or
@@ -26,7 +26,6 @@ makeCacheMatrix <- function(x = matrix()) {
 ##  calculating it and returns the cached value.
 
 cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
   m <- x$getinv()
   if(!is.null(m)) {
     message("getting cached data")
